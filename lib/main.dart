@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ku_dorm_frontend/ui/app.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ku_dorm_frontend/ui/login/login_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,8 +11,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyApp()
+    return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.notoSansThaiTextTheme(),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xFF207A4D),
+        ),
+        scaffoldBackgroundColor: Color(0xFFF8F5ED),
+      ),
+      home: LoginScreen()
     );
   }
 }
