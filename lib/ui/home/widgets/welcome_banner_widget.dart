@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class WelcomeBannerWidget extends StatelessWidget {
-  const WelcomeBannerWidget({super.key});
+  final String fullName;
+
+  const WelcomeBannerWidget({super.key, required this.fullName});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class WelcomeBannerWidget extends StatelessWidget {
                       ),
                       SizedBox(height: 18),
                       Text(
-                        'สวัสดี, ธนพล 👋',
+                        'สวัสดี, $fullName 👋',
                         style: TextStyle(fontSize: 24),
                       ),
                       Text(
